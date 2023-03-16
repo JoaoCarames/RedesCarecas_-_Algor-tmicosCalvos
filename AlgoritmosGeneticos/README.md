@@ -2,6 +2,10 @@
 
 Os experimentos realizados nessa seção correspondem à disciplina de Algoritmos Genéticos, feitos em sala de aula, com a ajuda e/ou orientação do professor Daniel Cassar e de colegas de classe.
 
+## Funções
+
+O arquivo funcoes.py permite a criação a de uma biblioteca própria com funções feitas em python puro, as quais foram feitas e utilizadas ao longo dos experimentos descritos em frente.
+
 ## Experimento A.01
 
 O experimento A.01 propõe a resolução do Problema das Caixas Binárias (individuo de maior soma, cada um possui 4 caixas e elas podem valer 0 ou 1) com o uso da Busca Aleatória, na qual, foram utilizadas três funções que quando utilizadas em conjunto, fornecem um número n de candidatos aleatórios e sua respectiva soma.
