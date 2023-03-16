@@ -4,7 +4,7 @@ Os experimentos realizados nessa seção correspondem à disciplina de Algoritmo
 
 ## Funções
 
-O arquivo funcoes.py permite a criação a de uma biblioteca própria com funções feitas em python puro, as quais foram feitas e utilizadas ao longo dos experimentos descritos em frente.
+O arquivo funcoes.py permite a criação a de uma biblioteca própria com funções feitas em python puro, as quais foram feitas e utilizadas ao longo dos experimentos descritos a seguir.
 
 ## Experimento A.01
 
@@ -16,7 +16,7 @@ O experimento A.02 mostra uma outra estratégia para a resolução do problema c
 
 ## Experimento A.03
 
-A
+O experimento A.03 coloca como solução para o Problema das Caixas Binárias um primeiro Algoritmo Genérico, o qual usa dos conceitos descritos no notebook para selecionar os melhores individuos de uma população ao longo das gerações. Dessa forma, os individuos da população inicial com maior valor de função objetivo são selecionados e aparecem na população final. Isso não garante a obtenção do melhor individuo, então foram usados os mecanismos de cruzamento e mutação para aumentar a variabilidade genética ao longo das gerações, o que permite a seleção selecionar o melhor individuo, mas sem a garantia por causa do acaso.
 
 ## Experimento A.04
 

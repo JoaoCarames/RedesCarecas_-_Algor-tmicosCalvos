@@ -57,6 +57,37 @@ def selecao_roleta_max(populacao, fitness):
     populacao_selecionada = random.choices(populacao, weights=fitness, k=len(populacao))
     return populacao_selecionada
 
+def cruzamento_ponto_simples(pai, mae):
+    """Operador de cruzamento de ponto simples.
+    
+    Args:
+        Pai: uma lista representando um individuo.
+        Mae: uma lista representando um individuo.
+    
+    Return:
+        Duas listas, cada qual representa um filho dos pais.
+    """
+    ponto_de_corte = random.randint(1, len(mae) - 1)
+    
+    filho1 = pai[:ponto_de_corte] + mae[ponto_de_corte:]
+    filho2 = mae[:ponto_de_corte] + pai[ponto_de_corte:]
+    
+    return filho1, filho2
+
+def mutacao_cb(individuo):
+    """Realiza a mutação de um gene
+    
+    Args:
+        individuo: uma lista de genes
+        
+    Return:
+        Um individuo com um gene mutado
+    """
+    gene_mutavel = random.randint(0, len(individuo) - 1)
+    individuo[gene_mutavel] = gene_cb()
+    
+    return individuo
+
 def funcao_objetivo_cb(individuo):
     """Computa a função objetivo no problema das caixas binárias.
     
@@ -68,7 +99,7 @@ def funcao_objetivo_cb(individuo):
     """
     return sum(individuo)
 
-def funcao_objetivos_pop_cb(populacao):
+def funcao_objetivo_pop_cb(populacao):
     """Calcula a função objetivo para todos os membros de uma população.
     
     Args:
@@ -81,6 +112,6 @@ def funcao_objetivos_pop_cb(populacao):
     for individuo in populacao:
         fobj = funcao_objetivo_cb(individuo)
         fitness.append(fobj)
-    
     return fitness
 
+### Fim
