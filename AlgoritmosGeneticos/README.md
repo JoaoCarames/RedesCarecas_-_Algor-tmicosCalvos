@@ -20,6 +20,6 @@ O experimento A.03 coloca como solução para o Problema das Caixas Binárias um
 
 ## Experimento A.04
 
-A
+O experimento A.04 nos põe em frente a um problema semelhante dos experimentos anteriores, mas, dessa vez, temos Caixas Não-Binárias. Essas caixas podem, então, assumir valores diferentes de 0 ou 1, podem assumir os valores que quisermos. Assim, o algoritmo tenta encontrar, nesse caso, a maior soma com os genes podendo chegar em 100. Novamente, o algoritmo genético não garante que nós encontraremos o melhor indivíduo, porém podemos encontrar um que seja melhor que todos os indivíduos da população inicial.
 
 ## Experimento A.05
