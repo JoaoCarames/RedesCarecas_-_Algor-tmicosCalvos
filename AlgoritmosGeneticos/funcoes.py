@@ -279,6 +279,94 @@ def funcao_objetivo_pop_senha(populacao, senha_verdadeira):
 
     return resultado
 
+##################
+### PALINDROMO ###
+##################
+
+def gene_palindromo(letras):
+    """Sorteia uma letra.
+    Args:
+      letras: letras possíveis de serem sorteadas.
+    Return:
+      Retorna uma letra dentro das possíveis de serem sorteadas.
+    """
+    letra = random.choice(letras)
+    return letra
+
+def individuo_palindromo(tamanho_palindromo, letras):
+    """Cria um candidato para o problema da senha
+    Args:
+      tamanho_senha: inteiro representando o tamanho da senha.
+      letras: letras possíveis de serem sorteadas.
+    Return:
+      Lista com n letras
+    """
+
+    candidato = []
+
+    for n in range(tamanho_palindromo):
+        candidato.append(gene_palindromo(letras))
+
+    return candidato
+
+def populacao_inicial_palindromo(tamanho, tamanho_palindromo, letras):
+    """Cria população inicial no problema da senha
+    Args
+      tamanho: tamanho da população.
+      tamanho_senha: inteiro representando o tamanho da senha.
+      letras: letras possíveis de serem sorteadas.
+    Returns:
+      Lista com todos os indivíduos da população no problema da senha.
+    """
+    populacao = []
+    for n in range(tamanho):
+        populacao.append(individuo_palindromo(tamanho_palindromo, letras))
+    return populacao
+
+def mutacao_palindromo(individuo, letras):
+    """Realiza a mutação de um gene no problema da senha.
+    Args:
+      individuo: uma lista representado um individuo no problema da senha
+      letras: letras possíveis de serem sorteadas.
+    Return:
+      Um individuo (senha) com um gene mutado.
+    """
+    gene = random.randint(0, len(individuo) - 1)
+    individuo[gene] = gene_palindromo(letras)
+    return individuo
+
+def funcao_objetivo_palindromo(individuo):
+    """Computa a funcao objetivo de um individuo no problema da senha
+    Args:
+      individiuo: lista contendo as letras da senha
+      senha_verdadeira: a senha que você está tentando descobrir
+    Returns:
+      A "distância" entre a senha proposta e a senha verdadeira. Essa distância
+      é medida letra por letra. Quanto mais distante uma letra for da que
+      deveria ser, maior é essa distância.
+    """
+    diferenca = 0
+    palindromo = individuo[::-1]
+    for letra_candidato, letra_oposta in zip(individuo, palindromo):
+        diferenca = diferenca + abs(ord(letra_candidato) - ord(letra_oposta))
+
+    return diferenca
+
+def funcao_objetivo_pop_palindromo(populacao):
+    """Computa a funcao objetivo de uma populaçao no problema da senha.
+    Args:
+      populacao: lista com todos os individuos da população
+      senha_verdadeira: a senha que você está tentando descobrir
+    Returns:
+      Lista contendo os valores da métrica de distância entre senhas.
+    """
+    resultado = []
+
+    for individuo in populacao:
+        resultado.append(funcao_objetivo_palindromo(individuo))
+
+    return resultado
+
 ###############
 ### SELEÇÃO ###
 ###############
@@ -304,7 +392,7 @@ def selecao_torneio_min(populacao, fitness, tamanho_torneio=3):
     minimização.
     Args:
       populacao: população do problema
-      fun_objetivo: função objetivo
+      fitness: lista com os valores de fitness da população
       tamanho_torneio: quantidade de invidiuos que batalham entre si
     Returns:
       Individuos selecionados. Lista com os individuos selecionados com mesmo

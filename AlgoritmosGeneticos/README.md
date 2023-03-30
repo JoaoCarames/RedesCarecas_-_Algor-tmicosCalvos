@@ -23,3 +23,5 @@ O experimento A.03 coloca como solução para o Problema das Caixas Binárias um
 O experimento A.04 nos põe em frente a um problema semelhante dos experimentos anteriores, mas, dessa vez, temos Caixas Não-Binárias. Essas caixas podem, então, assumir valores diferentes de 0 ou 1, podem assumir os valores que quisermos. Assim, o algoritmo tenta encontrar, nesse caso, a maior soma com os genes podendo chegar em 100. Novamente, o algoritmo genético não garante que nós encontraremos o melhor indivíduo, porém podemos encontrar um que seja melhor que todos os indivíduos da população inicial.
 
 ## Experimento A.05
+
+O experimento A.05 propõe o desafio de encontrar uma senha, sabendo a senha. Explicando melhor, o algoritmo genético irá selecionar, cruzar e mutar os indivíduos de uma população inicial usando o critério de distância. Para isso, os caracteres da senha são transformados em números e a distância para senha real é medida gene à gene e o fitness do indivíduo é a soma das distâncias de cada gene para o gene correto da senha. Logo, o algoritmo se mostra útil para encontrar/criar uma sequência ideal a partir de uma população inicial e critérios determinados.
