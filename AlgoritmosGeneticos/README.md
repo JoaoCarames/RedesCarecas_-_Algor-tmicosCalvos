@@ -25,3 +25,7 @@ O experimento A.04 nos põe em frente a um problema semelhante dos experimentos 
 ## Experimento A.05
 
 O experimento A.05 propõe o desafio de encontrar uma senha, sabendo a senha. Explicando melhor, o algoritmo genético irá selecionar, cruzar e mutar os indivíduos de uma população inicial usando o critério de distância. Para isso, os caracteres da senha são transformados em números e a distância para senha real é medida gene à gene e o fitness do indivíduo é a soma das distâncias de cada gene para o gene correto da senha. Logo, o algoritmo se mostra útil para encontrar/criar uma sequência ideal a partir de uma população inicial e critérios determinados.
+
+## Experimento A.06
+
+O experimento A.06 nos mostra um novo problema, o do caixeiro viajante. Nesse problema, um personagem fictício (o caixeiro) viaja um número finito de cidades conhecidas, sem passar pela mesma cidade mais de uma vez e com a intenção de percorrer a menor distância possível. Assim, nossos genes serão as cidades, nosso indivíduo possuirá uma ordem de genes que significa o caminho, a mutação será do tipo de troca de genes e o cruzamento possui dois cortes. Dessa forma, o problema se mostra diferente dos demais visitados anteriormente e é do tipo NP, o que é importante para ressaltar a importância de uma boa resposta fornecida pelo algoritmo genético. 
