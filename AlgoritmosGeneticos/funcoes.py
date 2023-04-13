@@ -65,7 +65,18 @@ def computa_mochila(individuo, objetos, ordem_dos_nomes):
     """
 
     "vamos preencher aqui"
-
+    
+    valor_total = 0
+    peso_total = 0
+    
+    for pegou_o_item_ou_nao, nome_da_lista in zip(individuo, ordem_dos_nomes):
+        if pegou_o_item_ou_nao == 1:
+            valor_do_item = objetos[nome_da_lista]["valor"]
+            peso_do_item = objetos[nome_da_lista]["peso"]
+            
+            valor_total = valor_total + valor_do_item
+            peso_total = peso_total + peso_do_item
+    
     return valor_total, peso_total
 
 
@@ -568,8 +579,13 @@ def funcao_objetivo_mochila(individuo, objetos, limite, ordem_dos_nomes):
     """
 
     "vamos preencher aqui"
-
-    pass
+    
+    valor_mochila, peso_mochila = computa_mochila(individuo, objetos, ordem_dos_nomes)
+    
+    if peso_mochila > limite:
+        valor_mochila = 0.01
+    
+    return valor_mochila
 
 
 
