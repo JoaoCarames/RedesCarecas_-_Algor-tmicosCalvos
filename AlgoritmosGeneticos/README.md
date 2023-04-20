@@ -33,3 +33,7 @@ O experimento A.06 nos mostra um novo problema, o do caixeiro viajante. Nesse pr
 ##  Experimento A.07
 
 O experimento A.07 visa encontrar uma boa resolução para o problema da mochila, o qual consiste na tentativa de acumular o maior valor monetário possível por meio de itens em uma mochila, a qual possui uma capacidade máxima de armazenamento quanto ao peso total desses itens. Então, o algoritmo genético possui o objetivo de encontrar qual indivíduo tem a melhor combinação de genes para esse problema. Vale notar que esse é mais um problema NP difícil e para garantir que a resposta dada pelo problema é a melhor, seria necessário verificar todas as possibilidades em uma busca exaustiva.
+
+## Experimento GA.05
+
+O experimento GA.05 tem como objetivo encontrar 10 palídromos (palavras que quando lidas da direita para a esquerda são iguais ao do sentido convencional) de cinco letras e contendo pelo menos uma vogal. Para isso, o algoritmo genético foi utlizado, o qual seleciona os indivíduos com menor diferença, ou seja, que sejam mais parecidos com seus inversos e possuam vogais, cruza poucos indivíduos e muta vários, a fim de criar uma diversidade maior no hall da fama, o qual armazena os indivíduos aptos que aparecem no decorrer das gerações.
