@@ -1,16 +1,9 @@
-# Template para a disciplina de Redes Neurais e Algoritmos Genéticos
+# Redes Neurais e Algoritmos Genéticos
 
-Use este template como base para organizar seus experimentos na disciplina de Redes Neurais e Algoritmos Genéticos. 
+Olá, me chamo João Caramês e sou aluno da Ilum Escola de Ciência do CNPEM. Esse repositório faz referência à disciplina de Redes Neurais e Algoritmos Genéticos do terceiro semestre do curso de Bacharelado em Ciência e Tecnologia da Ilum.
 
-Lembretes:
+Nesse sentido, você encontrará nesse repositório uma seção para cada uma das ferramentas mencionadas. Cada uma possui uma série de notebooks com experimentos diferentes, os quais constroem uma progressão do corpo de ideias dos algoritmos. Assim, os experimentos iniciais são introdutórios e resolvem problemas relativamente simples para mostrar cada parte da construção do raciocínio por trás dos algoritmos completos.
 
-+ Cada notebook deve ter apenas um experimento
-+ Jamais faça importações utilizando o asterisco. Use espaços de nome ou importe apenas o que for usar no seu experimento
-+ Códigos bem formatados são recomendados. Sugestão: use o formatador black. Ele tem uma versão online disponível em https://black.vercel.app
-+ Sempre use nomes claros e representativos para suas funções, classes, métodos e variáveis
-+ Sempre escreva uma docstring nas suas funções, classes e métodos
-+ Funções simples podem ter doscrings em uma linha. As demais funções devem ter docstrings completas
-+ Comente seu código sempre que julgar necessário, principalmente quando o que estiver sendo executado não for trivial
-+ Todos os notebooks devem funcionar corretamente seguindo a ordem de cima para baixo. Evite rodar células fora da ordem para evitar problemas de continuidade no seu experimento (reordene as células caso seja necessário)
-+ Certifique-se que todas as células do seus notebooks foram executadas! Afinal, como você vai realizar seu experimento sem executar as células?
-+ Reescreva os README do seu repositório para guiar o leitor
+Um exemplo do que foi dito é visível nos primeiros três experimentos de algoritmos genéticos, onde vimos a aplicação de cada um dos operadores genéticos (seleção, cruzamento e mutação) e depois os utilizamos juntos para a resolução de um problema no Experimento A.03 concluindo a construção de um algoritmo genético básico funcional, o qual pode ser utilizado como base para a resolução de conjecturas mais complexas noutros momentos.
+
+Por fim, há também um template de experimento utilizado para a resolução das práticas individuais, o readme de cada seção, documentações gerais , como a licensa, e arquivos adicionais de suporte, os quais facilitam o desenvolvimento dos experimentos e resume/organizam os códigos.
