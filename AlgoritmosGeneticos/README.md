@@ -4,7 +4,7 @@ Os experimentos realizados nessa seção correspondem à disciplina de Algoritmo
 
 ## Funções
 
-O arquivo funcoes.py permite a criação a de uma biblioteca própria com funções feitas em python puro, as quais foram feitas e utilizadas ao longo dos experimentos descritos a seguir.
+O arquivo funcoes.py permite a criação de uma biblioteca própria com funções feitas em python puro ou com o auxílio mínimo de outras bibliotecas, as quais foram feitas e utilizadas ao longo dos experimentos descritos a seguir.
 
 ## Experimento A.01
 
@@ -37,3 +37,7 @@ O experimento A.07 visa encontrar uma boa resolução para o problema da mochila
 ## Experimento GA.05
 
 O experimento GA.05 tem como objetivo encontrar 10 palídromos (palavras que quando lidas da direita para a esquerda são iguais ao do sentido convencional) de cinco letras e contendo pelo menos uma vogal. Para isso, o algoritmo genético foi utlizado, o qual seleciona os indivíduos com menor diferença, ou seja, que sejam mais parecidos com seus inversos e possuam vogais, cruza poucos indivíduos e muta vários, a fim de criar uma diversidade maior no hall da fama, o qual armazena os indivíduos aptos que aparecem no decorrer das gerações.
+
+## Experimento GA.06
+
+O experimento GA.06 tem a intenção de encontrar pelo menos um ponto de mínimo global para a Equação de Himmelblau ($H(x,y) = (x^2 + y - 11)^2 + (x + y^2 - 7)^2$), a qual é largamente utilizada como teste de eficiência de algoritmos e possui quatro mínimos. Nesse intuito, o algoritmo genético encontra um indivíduo, o qual possui um par ordenado (x,y) como gene, que atende a condição de mínimo ($H(x,y) = 0$), e, se aplicado diversas vezes, pode encontrar todos os pontos possíveis com uma dada aproximação.
